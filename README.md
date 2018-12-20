@@ -6,20 +6,20 @@ Using Paho-MQTT (python module) to connect to CloudMQTT (Free tier under 15 devi
 2) Write code
 
 ## <Code>
-import paho.mqtt.client as mqtt
-def on_connect(client, userdata, flags, rc):
-   print ("connected with code" +str(rc))
-   client.subscribe("Test/#")
+import paho.mqtt.client as mqtt  
+def on_connect(client, userdata, flags, rc):  
+   print ("connected with code" +str(rc))  
+   client.subscribe("Test/#")  
 
-def on_message(client, userdata, msg):
- print (str(msg.payload))
+def on_message(client, userdata, msg):  
+ print (str(msg.payload))  
  
- client = mqtt.Client()
- client.on_connect = on_connect
- client.on_message = on_message
- client.connect("xxx.cloudmqtt.com", portxxx, 60)
- client.username_pw_set("userxxx", "passxxx")
- client.loop_forever();
+ client = mqtt.Client()  
+ client.on_connect = on_connect  
+ client.on_message = on_message  
+ client.connect("xxx.cloudmqtt.com", portxxx, 60)  
+ client.username_pw_set("userxxx", "passxxx")  
+ client.loop_forever();  
 ## <Code>
 
 
