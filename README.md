@@ -5,7 +5,7 @@ Using Paho-MQTT (python module) to connect to CloudMQTT (Free tier under 15 devi
 1) pip install paho-mqtt
 2) Write code
 
-## <Code>
+
 import paho.mqtt.client as mqtt  
 def on_connect(client, userdata, flags, rc):  
    print ("connected with code" +str(rc))  
@@ -19,8 +19,7 @@ def on_message(client, userdata, msg):
  client.on_message = on_message  
  client.connect("xxx.cloudmqtt.com", portxxx, 60)  
  client.username_pw_set("userxxx", "passxxx")  
- client.loop_forever();  
-## <Code>
+ client.loop_forever();   
 
 
 Ping to all subscribe under "Test"
